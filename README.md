@@ -59,6 +59,10 @@ PHPの授業で使う
     `php artisan migrate`<br>
     mysqlで `SHOW TABLES;` を実行してテーブルが作成されたことを確認する
 
+1. APP_KEY の設定<br>
+    以下のコマンドを実行する
+    `php artisan key:generate`
+
 1. 開発用サーバーの起動<br>
     `php artisan serve`<br>
     表示されたURLにアクセスする
