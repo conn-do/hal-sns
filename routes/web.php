@@ -11,3 +11,5 @@ use App\Http\Controllers\PostController;
 
 // Route::get('/example', [ExampleController::class, 'index']);
 Route::get('/', [PostController::class, 'index']);
+Route::get('/post', [PostController::class, 'post']);
+Route::post('/post', [PostController::class, 'save'])->name('post.save');

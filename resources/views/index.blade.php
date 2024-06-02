@@ -1,15 +1,16 @@
 @extends('layouts.default')
 
-@section('title', 'Page Title')
+@section('title', '投稿一覧')
 
-@section('sidebar')
+@section('header')
     @parent
-
-    <p>This is appended to the master sidebar.</p>
 @endsection
 
 @section('content')
     @foreach ($posts as $post)
-        {{ $post->title }}
+        <p>{{ $post->title }}<p>
     @endforeach
+    <p>
+        <a href="/post">新規投稿</a>
+    </p>
 @endsection

@@ -1,10 +1,11 @@
 <html>
     <head>
-        <title>App Name - @yield('title')</title>
+        <title>HAL SNS - @yield('title')</title>
+        @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
     <body>
-        @section('sidebar')
-            This is the master sidebar.
+        @section('header')
+            <h1>HAL SNS</h1>
         @show
 
         <div class="container">
