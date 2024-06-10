@@ -1,12 +1,20 @@
-<html>
-    <body>
-        <h1>投稿一覧</h1>
-        <ul>
-            @foreach ($posts as $post)
-                <li>
+@extends('layouts.base')
+
+@section('title', '投稿一覧ページ')
+
+@section('header')
+    @parent
+    <h2>投稿一覧ページ</h2>
+@endsection
+
+@section('content')
+    <ul>
+        @foreach ($posts as $post)
+            <li>
+                <a href="{{ route('posts.show', ['id' => $post->id]) }}">
                     {{ $post->title }}
-                </li>
-            @endforeach
-        </ul>
-    </body>
-</html>
+                </a>
+            </li>
+        @endforeach
+    </ul>
+@endsection
