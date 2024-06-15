@@ -20,3 +20,6 @@ Route::post('/post/{id}/edit', [PostController::class, 'update'])->name('posts.u
 Route::get('/post/{id}/delete', [PostController::class, 'delete'])->name('posts.delete');
 Route::get('/post/{postId}/comment', [CommentController::class, 'post'])->name('comments.post');
 Route::post('/post/{postId}/comment', [CommentController::class, 'save'])->name('comments.save');
+Route::get('/post/{postId}/comment/{id}/edit', [CommentController::class, 'edit'])->name('comments.edit');
+Route::post('/post/{postId}/comment/{id}/edit', [CommentController::class, 'update'])->name('comments.update');
+Route::get('/post/{postId}/comment/{id}/delete', [CommentController::class, 'delete'])->name('comments.delete');

@@ -26,7 +26,11 @@
 
     <ul>
         @foreach ($post->comments as $comment)
-            <li>{{ $comment->comment }}</li>
+            <li>
+                {{ $comment->comment }}
+                <a href="{{ route('comments.edit', ['postId' => $post->id, 'id' => $comment->id]) }}">編集</a>
+                <a href="{{ route('comments.delete', ['postId' => $post->id, 'id' => $comment->id]) }}">削除</a>
+            </li>
         @endforeach
     </ul>
 
