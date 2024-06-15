@@ -25,4 +25,22 @@ class PostController extends Controller
             'post' => $post,
         ]);
     }
+
+    public function post()
+    {
+        return view('post');
+    }
+
+    public function save(Request $request)
+    {
+        $title = $request->input('title');
+        $body = $request->input('body');
+
+        $post = new Post();
+        $post->title = $title;
+        $post->body = $body;
+        $post->save();
+
+        return redirect('/');
+    }
 }
