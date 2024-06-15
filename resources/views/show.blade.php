@@ -11,4 +11,8 @@
     <p>
         {{ $post->body }}
     </p>
+
+    <div>
+        <a href="{{ route('posts.edit', ['id' => $post->id]) }}">編集</a>
+    </div>
 @endsection
