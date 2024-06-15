@@ -16,3 +16,4 @@ Route::get('/post', [PostController::class, 'post']);
 Route::post('/post', [PostController::class, 'save']);
 Route::get('/post/{id}/edit', [PostController::class, 'edit'])->name('posts.edit');
 Route::post('/post/{id}/edit', [PostController::class, 'update'])->name('posts.update');
+Route::get('/post/{id}/delete', [PostController::class, 'delete'])->name('posts.delete');

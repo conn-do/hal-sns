@@ -15,4 +15,8 @@
     <div>
         <a href="{{ route('posts.edit', ['id' => $post->id]) }}">編集</a>
     </div>
+
+    <div>
+        <a href="{{ route('posts.delete', ['id' => $post->id]) }}">削除</a>
+    </div>
 @endsection
