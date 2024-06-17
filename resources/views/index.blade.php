@@ -17,4 +17,7 @@
             </li>
         @endforeach
     </ul>
+    <div>
+        <a href="/post">新規投稿</a>
+    </div>
 @endsection
