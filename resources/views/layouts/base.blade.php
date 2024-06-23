@@ -10,6 +10,9 @@
         <header>
             @section('header')
                 <h1>HAL SNS</h1>
+                @auth
+                    <x-profile />
+                @endauth
             @show
         </header>
 
