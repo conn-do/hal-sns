@@ -11,6 +11,9 @@
     <p>
         {{ $post->body }}
     </p>
+    <p>
+        投稿者: {{ $post->user->name }}
+    </p>
     <div>
         <a href="{{ route('posts.edit', ['id' => $post->id]) }}">編集</a>
     </div>

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 use App\Models\Post;
 
@@ -33,10 +34,12 @@ class PostController extends Controller
 
     public function save(Request $request)
     {
+        $user = Auth::user();
         $title = $request->input('title');
         $body = $request->input('body');
 
         $post = new Post();
+        $post->user()->associate($user);
         $post->title = $title;
         $post->body = $body;
         $post->save();
