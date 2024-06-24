@@ -6,7 +6,7 @@
             'resources/js/app.js'
         ])
     </head>
-    <body>
+    <body class="prose">
         <header>
             @section('header')
                 <h1>HAL SNS</h1>
