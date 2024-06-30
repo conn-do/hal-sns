@@ -8,6 +8,16 @@
     </head>
     <body class="prose">
         <header>
+            @guest
+                <a href="{{ route('login') }}">ログイン</a>
+                <a href="{{ route('register') }}">新規登録</a>
+            @endguest
+            @auth
+                <form action="{{ route('logout') }}" method="POST">
+                    @csrf
+                    <button type="submit">ログアウト</button>
+                </form>
+            @endauth
             @section('header')
                 <h1>HAL SNS</h1>
             @show
