@@ -8,6 +8,9 @@
 @endsection
 
 @section('content')
+    <x-accordion title="このサイトは？">
+        <p>HAL生のありのままを公開するサイトです</p>
+    </x-accordion>
     <ul>
         @foreach ($posts as $post)
             <li>
