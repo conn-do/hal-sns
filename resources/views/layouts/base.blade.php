@@ -13,6 +13,7 @@
                 <a href="{{ route('register') }}">新規登録</a>
             @endguest
             @auth
+                <x-profile />
                 <form action="{{ route('logout') }}" method="POST">
                     @csrf
                     <button type="submit">ログアウト</button>
