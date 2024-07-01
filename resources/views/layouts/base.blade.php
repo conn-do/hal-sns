@@ -11,6 +11,21 @@
             @section('header')
                 <h1>HAL SNS</h1>
             @show
+            @auth
+                <div>
+                    <x-profile />
+                    <form action="{{ route('logout') }}" method="POST">
+                        @csrf
+                        <button type="submit">ログアウト</button>
+                    </form>
+                </div>
+            @endauth
+            @guest
+                <div>
+                    <a href="{{ route('login') }}">ログイン</a>
+                    <a href="{{ route('register') }}">会員登録</a>
+                </div>
+            @endguest
         </header>
 
         <div class="container">
