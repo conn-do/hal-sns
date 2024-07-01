@@ -23,7 +23,7 @@ Route::middleware('auth')->group(function () {
 
 require __DIR__.'/auth.php';
 
-Route::get('/', [PostController::class, 'index']);
+Route::get('/', [PostController::class, 'index'])->name('posts.index');
 Route::get('/post/{id}', [PostController::class, 'show'])->name('posts.show');
 Route::get('/post/{postId}/comment', [CommentController::class, 'post'])->name('comments.post');
 Route::post('/post/{postId}/comment', [CommentController::class, 'save'])->name('comments.save');
