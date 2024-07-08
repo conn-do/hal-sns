@@ -67,4 +67,14 @@ class PostController extends Controller
             'id' => $post->id,
         ]);
     }
+
+    public function myPage()
+    {
+        $user = Auth::user();
+        $posts = Post::where('user_id', $user->id)->get();
+
+        return view('my-page', [
+            'posts' => $posts,
+        ]);
+    }
 }
