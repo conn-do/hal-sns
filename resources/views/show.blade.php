@@ -15,6 +15,9 @@
         投稿者: {{ $post->user->name }}
     </p>
     <div>
+        <img src="{{ asset($post->image) }}">
+    </div>
+    <div>
         <a href="{{ route('posts.edit', ['id' => $post->id]) }}">編集</a>
     </div>
     <div>
