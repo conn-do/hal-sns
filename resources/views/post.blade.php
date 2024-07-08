@@ -8,7 +8,7 @@
 @endsection
 
 @section('content')
-    <form action="{{ route('posts.save') }}" method="POST">
+    <form action="{{ route('posts.save') }}" method="POST" enctype="multipart/form-data">
         @csrf
         <div>
             タイトル<br>
@@ -17,6 +17,10 @@
         <div>
             本文<br>
             <textarea name="body"></textarea>
+        </div>
+        <div>
+            画像<br>
+            <input type="file" name="image">
         </div>
         <button type="submit">投稿</button>
     </form>

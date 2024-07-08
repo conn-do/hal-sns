@@ -37,11 +37,13 @@ class PostController extends Controller
         $user = Auth::user();
         $title = $request->input('title');
         $body = $request->input('body');
+        $path = $request->file('image')->store('images');
 
         $post = new Post();
         $post->user()->associate($user);
         $post->title = $title;
         $post->body = $body;
+        $post->image = $path;
         $post->save();
 
         return redirect('/');
